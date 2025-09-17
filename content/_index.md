@@ -1,3 +1,3 @@
 ---
-title: "Mechanical Keyboard"
+title: "Lily58 Wireless Keyboard"
 ---
