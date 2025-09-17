@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="docs-layout">
+  <aside class="sidebar">
+    <ul>
+      <li><a href="/docs/">Introduction</a></li>
+      <li><a href="/docs/config/">Configuration</a></li>
+      <li><a href="/docs/assembly/">Assembly</a></li>
+    </ul>
+  </aside>
+  <article class="content">
+    {{ .Content }}
+  </article>
+</div>
+{{ end }}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on Keyboard Shop</title>
+    <link>http://localhost:1313/docs/</link>
+    <description>Recent content in Docs on Keyboard Shop</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assembly</title>
+      <link>http://localhost:1313/docs/assembly/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/assembly/</guid>
+      <description>&lt;h1 id=&#34;keyboard-assembly-guide&#34;&gt;Keyboard Assembly Guide&lt;/h1&gt;&#xA;&lt;p&gt;Step-by-step guide to assembling your keyboard kit. (Mock content)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configuration</title>
+      <link>http://localhost:1313/docs/config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/config/</guid>
+      <description>&lt;h1 id=&#34;keyboard-configuration&#34;&gt;Keyboard Configuration&lt;/h1&gt;&#xA;&lt;p&gt;Learn how to configure your keyboard switches, keycaps, and backlight. (Mock content)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

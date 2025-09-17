@@ -1,0 +1,6 @@
+baseURL = "http://localhost:1313/"
+title = "Keyboard Shop"
+languageCode = "en-us"
+
+[markup.goldmark.renderer]
+unsafe = true
