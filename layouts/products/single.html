@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="product-detail">
+  <h1>{{ .Title }}</h1>
+  <div class="product-gallery">
+    {{ with .Params.images }}
+      {{ range . }}
+      <img src="{{ . }}" alt="Product image">
+      {{ end }}
+    {{ end }}
+  </div>
+  <div class="product-description">
+    {{ .Content }}
+  </div>
+  <div class="buy-now">
+    <a href="{{ .Params.buy }}" class="btn">Buy Now</a>
+  </div>
+</div>
+{{ end }}
+

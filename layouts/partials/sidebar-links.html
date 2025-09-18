@@ -1,0 +1,51 @@
+{{ $docs := .Site.GetPage "section" "docs" }} {{ $current := . }}
+
+<ul class="sidebar-menu">
+  <!-- 顶部 Docs 链接（sidebar 顶部） -->
+  <li class="root">
+    <a
+      href="{{ $docs.RelPermalink }}"
+      class="{{ if eq $current.RelPermalink $docs.RelPermalink }}active{{ end }}"
+    >
+      {{ $docs.Title }}
+    </a>
+  </li>
+
+  <!-- 遍历 docs 下的普通页面（config.md / faq.md 等） -->
+  {{ range $docs.RegularPages.ByWeight }}
+  <li>
+    <a
+      href="{{ .RelPermalink }}"
+      class="{{ if eq $current.RelPermalink .RelPermalink }}active{{ end }}"
+    >
+      {{ .Title }}
+    </a>
+  </li>
+  {{ end }}
+
+  <!-- 遍历 docs 下的子目录 -->
+  {{ range $docs.Sections.ByWeight }}
+  <li class="section">
+    <a
+      href="{{ .RelPermalink }}"
+      class="{{ if eq $current.RelPermalink .RelPermalink }}active{{ end }}"
+    >
+      {{ .Title }}
+    </a>
+    {{ if .RegularPages }}
+    <ul class="submenu">
+      {{ range .RegularPages.ByWeight }}
+      <li>
+        <a
+          href="{{ .RelPermalink }}"
+          class="{{ if eq $current.RelPermalink .RelPermalink }}active{{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </li>
+  {{ end }}
+</ul>

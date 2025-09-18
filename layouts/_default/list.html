@@ -1,15 +1,12 @@
 {{ define "main" }}
 <div class="docs-layout">
-  <aside class="sidebar">
-    <ul>
-      <li><a href="/docs/">Introduction</a></li>
-      <li><a href="/docs/config/">Configuration</a></li>
-      <li><a href="/docs/assembly/">Assembly</a></li>
-    </ul>
-  </aside>
+  <!-- 左侧导航 -->
+  <aside class="sidebar">{{ partial "sidebar-links.html" . }}</aside>
+
+  <!-- 右侧正文 -->
   <article class="content">
+    <h1>{{ .Title }}</h1>
     {{ .Content }}
   </article>
 </div>
 {{ end }}
-

@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="products-page">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Content }}</p>
+
+  <div class="product-grid">
+    {{ range .Pages }}
+    <div class="product-card">
+      <a href="{{ .RelPermalink }}">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+      </a>
+      <p>{{ .Params.summary }}</p>
+      <div class="product-actions">
+        <span class="price-tag">${{ 188 }}</span>
+        <a href="{{ .RelPermalink }}" class="btn info-btn">View</a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
