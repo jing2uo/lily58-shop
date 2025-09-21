@@ -3,6 +3,11 @@ title: "FAQ"
 ---
 
 <details>
+  <summary><strong>Does the keyboard support Bluetooth or wired connections?</strong></summary>
+  No. It only supports **2.4G wireless**. You must connect the included receiver to your computer or device.
+</details>
+
+<details>
   <summary><strong>Can I customize keycaps, switches, or case colors?</strong></summary>
   Yes! Please contact me via email or open a GitHub issue to discuss your customization.
 </details>
@@ -14,7 +19,7 @@ title: "FAQ"
 
 <details>
   <summary><strong>I don't know how to use Vial. Can you help?</strong></summary>
-  If you are not familiar with English, please read the documentation first or contact me by email. If a meeting is necessary, reach me during UTC+8 working hours and please be aware my spoken English may be limited.
+  Please read the documentation first or contact me by email. If a meeting is necessary, reach me during UTC+8 working hours and please be aware my spoken English may be limited.
 </details>
 
 <details>

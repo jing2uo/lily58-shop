@@ -22,14 +22,6 @@ Welcome to the Documentation, here you can find everything about your keyboard.
 
 ### Multiple Versions Available 🛠
 
-You can choose from **MX Gateron**, **Choc Kailh**, and other switch types, in both **hot-swap** and **soldered** versions.
+You can choose from **MX**, **Gateron Choc**, **Kailh Choc**, in both **hot-swap** and **soldered** versions.
 
 ⚠️ Each version is a **separate keyboard build** — the firmware features remain fully identical across all variants.
-
----
-
-## What You’ll Get 🎁
-
-- ✅ **Fully assembled keyboard** – no soldering required.
-- ✅ **Ready to use** - just plug in the included 2.4G receiver.
-- ✅ **Thoroughly tested** - so you can start typing right away.
