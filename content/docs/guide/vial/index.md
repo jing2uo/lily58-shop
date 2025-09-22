@@ -2,6 +2,8 @@
 title: "Vial"
 ---
 
+---
+
 We recommend using the [Vial software](https://get.vial.today/) for full functionality. Access the web version at [vial.rocks](https://vial.rocks) (Chrome required). It provides more features and a better user experience.
 
 <p align="center">

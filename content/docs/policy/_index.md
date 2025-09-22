@@ -2,6 +2,8 @@
 title: "Policy"
 ---
 
+---
+
 This section outlines the important policies related to your purchase and use of this website.
 Here you will find details about:
 

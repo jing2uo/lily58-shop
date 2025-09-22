@@ -2,6 +2,8 @@
 title: "Privacy Policy"
 ---
 
+---
+
 We value your privacy and aim to be transparent about what data is (and isn’t) collected when you use this site.
 
 ## Website

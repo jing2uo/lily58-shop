@@ -2,6 +2,8 @@
 title: "Battery"
 ---
 
+---
+
 If you notice that the keyboard keys become unresponsive after a period of use, first check whether the battery is running low.
 
 To replace the battery:

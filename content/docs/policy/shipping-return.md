@@ -2,6 +2,8 @@
 title: "Shipping & Return"
 ---
 
+---
+
 ## Shipping
 
 - The listed price includes international shipping.
@@ -13,15 +15,12 @@ title: "Shipping & Return"
 ## Customs Duties
 
 - Customs duties, VAT, or import taxes (if any) are the responsibility of the buyer.
-
 - Please check your local customs regulations before placing an order.
-
-- We cannot undervalue the shipment or mark it as a gift to avoid duties.
 
 ## Returns
 
 - Due to the **very high cost of international logistics**, we currently **do not accept returns**.
-- In most cases, the round-trip shipping fee would exceed the price of the keyboard itself.
+- In most cases, the cost of sending it back and forth can be almost as much as a new keyboard.
 
 ## Refunds
 

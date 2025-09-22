@@ -7,12 +7,14 @@ buy: "https://buy.stripe.com/eVqcN54L47da0Ed3H26Vq01"
 
 The **Lily58 MX Wireless** brings classic MX mechanical switches to a split ergonomic design.
 
+📌 **Note:** The keycaps shown in the photos are from a unique set I happened to source. Only one set is available, and once it is sold, the product images will be updated accordingly.
+
 <p align="center">
-  <img src="mx1.jpg" alt="Lily58 Keyboard" width="400">
+  <img src="mx4.jpg" alt="Lily58 Keyboard" width="400">
 </p>
 
 <p align="center">
-  <img src="mx2.jpg" alt="Lily58 Keyboard" width="400">
+  <img src="mx3.jpg" alt="Lily58 Keyboard" width="400">
 </p>
 
 ## What You’ll Get 📦
@@ -41,3 +43,37 @@ You’ll also get powerful firmware features out of the box:
   - AutoShift
   - Mouse Keys
   - One Shot Keys
+
+### 📸 Gallery
+
+<p align="center">
+  <img src="mx1.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="mx5.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="mx6.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="mx9.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="mx7.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="mx8.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="key-switch.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="receiver.jpg" alt="Lily58 Keyboard" width="400">
+</p>

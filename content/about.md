@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-## About
+## About 💡
 
 After years of daily coding and typing, I began to experience pain in my fingers, which led me to explore split keyboards.
 
@@ -16,9 +16,12 @@ I believe this customized Lily58 can help you work more comfortably and efficien
 
 ---
 
-## Contact
+## Contact & Discussions 📌
 
-Reach me at **kbd@guojing.io**. You can also open an issue on [GitHub (lily58-shop)](https://github.com/jing2uo/lily58-shop) for questions or feedback.
+- 📱 Telegram: [Lily58 KBD](https://t.me/+v8c4mhUeGGk4NWM9) – Reach out instantly
+- 💬 GitHub Discussions: [lily58-shop/discussions/](https://github.com/jing2uo/lily58-shop/discussions/) – Start a discussion or share ideas
+- 📧 Email: [kbd@guojing.io](mailto:kbd@guojing.io) – Send me a message
+
 Feel free to get in touch about custom keyboard builds, firmware tweaks, or simply to share your typing experience — I'd be glad to connect.
 
 I’m usually available during **UTC+8 working hours (8–9 a.m.)**, when I can respond quickly.
