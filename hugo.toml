@@ -1,6 +1,8 @@
-baseURL = "http://localhost:1313/"
-title = "Keyboard Shop"
+baseURL = "https://kbd.guojing.io/"
+title = "Lily58 Shop"
 languageCode = "en-us"
+enableRobotsTXT = true
+sitemap = { changefreq = "monthly", priority = 0.5, filename = "sitemap.xml" }
 
 [markup.goldmark.renderer]
 unsafe = true
