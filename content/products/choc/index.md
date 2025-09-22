@@ -9,11 +9,11 @@ The **Lily58 Choc Version** is perfect for those who prefer low-profile switches
 Ultra-slim, lightweight, and still packed with Vial and 2.4G wireless functionality.
 
 <p align="center">
-  <img src="choc1.jpg" alt="Lily58 Keyboard" width="400">
+  <img src="choc3.jpg" alt="Lily58 Keyboard" width="400">
 </p>
 
 <p align="center">
-  <img src="choc2.jpg" alt="Lily58 Keyboard" width="400">
+  <img src="choc7.jpg" alt="Lily58 Keyboard" width="400">
 </p>
 
 ## What You’ll Get 📦
@@ -42,3 +42,33 @@ You’ll also get powerful firmware features out of the box:
   - AutoShift
   - Mouse Keys
   - One Shot Keys
+
+### 📸 Gallery
+
+<p align="center">
+  <img src="choc5.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="choc6.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="choc4.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="choc2.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="choc9.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="choc8.jpg" alt="Lily58 Keyboard" width="400">
+</p>
+
+<p align="center">
+  <img src="receiver.jpg" alt="Lily58 Keyboard" width="400">
+</p>
