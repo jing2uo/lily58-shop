@@ -25,6 +25,7 @@ On this site, you can:
 
 If you have questions about the site or the keyboards:
 
+- 📱 Telegram: [Lily58 KBD](https://t.me/+v8c4mhUeGGk4NWM9)
 - 📧 Email: [kbd@guojing.io](mailto:kbd@guojing.io)
 - 🐙 GitHub Issues: [jing2uo/lily58-shop](https://github.com/jing2uo/lily58-shop/issues)
 

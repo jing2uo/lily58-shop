@@ -19,8 +19,8 @@ I believe this customized Lily58 can help you work more comfortably and efficien
 ## Contact & Discussions 📌
 
 - 📱 Telegram: [Lily58 KBD](https://t.me/+v8c4mhUeGGk4NWM9) – Reach out instantly
-- 💬 GitHub Discussions: [lily58-shop/discussions/](https://github.com/jing2uo/lily58-shop/discussions/) – Start a discussion or share ideas
 - 📧 Email: [kbd@guojing.io](mailto:kbd@guojing.io) – Send me a message
+- 🐙 GitHub Discussions: [lily58-shop/discussions/](https://github.com/jing2uo/lily58-shop/discussions/) – Start a discussion or share ideas
 
 Feel free to get in touch about custom keyboard builds, firmware tweaks, or simply to share your typing experience — I'd be glad to connect.
 
