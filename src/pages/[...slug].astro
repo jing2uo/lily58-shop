@@ -1,0 +1,44 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../layouts/Base.astro";
+import DocsSidebar from "../components/DocsSidebar.astro";
+import { SITE } from "../lib/site";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages.map((page) => ({ params: { slug: page.id }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+const isDocs = page.id.startsWith("docs/");
+---
+
+<Base
+  title={`${page.data.title} — ${SITE.title}`}
+  description={page.data.description}
+  type="article"
+>
+  {
+    isDocs ? (
+      <div class="mx-auto max-w-6xl gap-10 px-5 py-12 md:grid md:grid-cols-[220px_1fr]">
+        <aside class="mb-8 md:mb-0">
+          <div class="md:sticky md:top-24">
+            <DocsSidebar />
+          </div>
+        </aside>
+        <article class="prose max-w-3xl">
+          <h1>{page.data.title}</h1>
+          <Content />
+        </article>
+      </div>
+    ) : (
+      <div class="mx-auto max-w-3xl px-5 py-12">
+        <article class="prose">
+          <h1>{page.data.title}</h1>
+          <Content />
+        </article>
+      </div>
+    )
+  }
+</Base>

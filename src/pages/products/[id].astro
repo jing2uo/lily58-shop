@@ -1,0 +1,96 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Gallery from "../../components/Gallery.astro";
+import { SITE } from "../../lib/site";
+
+export async function getStaticPaths() {
+  const products = await getCollection("products");
+  return products.map((product) => ({
+    params: { id: product.id },
+    props: { product },
+  }));
+}
+
+const { product } = Astro.props;
+const { title, summary, description, price, currency, buy, image, gallery } =
+  product.data;
+const { Content } = await render(product);
+
+const url = new URL(`/products/${product.id}/`, SITE.url).href;
+const productLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: title,
+  image: new URL(image, SITE.url).href,
+  description,
+  brand: { "@type": "Brand", name: SITE.brand },
+  offers: {
+    "@type": "Offer",
+    url,
+    priceCurrency: currency,
+    price: String(price),
+    availability: "https://schema.org/InStock",
+  },
+};
+---
+
+<Base
+  title={`${title} — ${SITE.title}`}
+  description={description}
+  image={image}
+  type="product"
+  jsonLd={productLd}
+>
+  <section class="mx-auto max-w-6xl px-5 py-10">
+    <nav class="text-sm">
+      <a href="/products/" class="text-muted hover:text-ink">Products</a>
+      <span class="text-subtle">/</span>
+      <span class="text-ink">{title}</span>
+    </nav>
+
+    <div class="mt-6 grid gap-10 lg:grid-cols-2">
+      <Gallery images={gallery} />
+
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight text-ink">{title}</h1>
+        <p class="mt-2 text-muted">{summary}</p>
+
+        <div class="mt-6 flex items-center gap-3">
+          <span class="price text-3xl">
+            ${price}<span class="ml-1 text-base font-normal text-subtle"
+              >{currency}</span
+            >
+          </span>
+          <span class="chip">In stock</span>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href={buy}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary">Buy now</a
+          >
+          <a href="/docs/" class="btn-secondary">Specs &amp; docs</a>
+        </div>
+
+        <ul class="mt-6 flex flex-wrap gap-2">
+          <li class="chip">2.4G Wireless</li>
+          <li class="chip">Vial</li>
+          <li class="chip">Hot-swap</li>
+          <li class="chip">58 keys</li>
+          <li class="chip">Free shipping</li>
+        </ul>
+
+        <p class="mt-5 text-xs text-subtle">
+          Secure checkout via Stripe · Ships within 3 business days
+        </p>
+      </div>
+    </div>
+
+    <article class="prose mt-14 max-w-3xl border-t border-line pt-10">
+      <Content />
+    </article>
+  </section>
+</Base>

@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  product: CollectionEntry<"products">;
+}
+const { product } = Astro.props;
+const { title, summary, price, currency, image } = product.data;
+---
+
+<a
+  href={`/products/${product.id}/`}
+  class="card card-hover group flex flex-col overflow-hidden"
+>
+  <div class="aspect-[4/3] overflow-hidden bg-canvas">
+    <img
+      src={image}
+      alt={title}
+      width="600"
+      height="450"
+      loading="lazy"
+      class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+    />
+  </div>
+  <div class="flex flex-1 flex-col p-5">
+    <h3 class="text-base font-semibold text-ink">{title}</h3>
+    <p class="mt-1 line-clamp-2 text-sm text-muted">{summary}</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="price text-lg">
+        ${price}<span class="ml-1 text-xs font-normal text-subtle">{currency}</span>
+      </span>
+      <span class="btn-secondary h-9 px-4 text-sm">View</span>
+    </div>
+  </div>
+</a>

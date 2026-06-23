@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Lily58 Shop — Geist / Vercel design language.
+   Monochrome high-contrast, hairline borders, tabular-mono
+   numerals. `--color-ink` is the max-contrast color (primary
+   text AND primary-button background); `--color-surface` is the
+   base surface (cards AND primary-button text). Flipping those
+   two tokens in dark mode inverts buttons the Vercel way for
+   free.
+   ============================================================ */
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+
+  /* Light palette */
+  --color-ink: #0a0a0a;
+  --color-ink-hover: #383838;
+  --color-muted: #666666;
+  --color-subtle: #8f8f8f;
+  --color-line: #eaeaea;
+  --color-line-strong: #d4d4d4;
+  --color-surface: #ffffff;
+  --color-canvas: #fafafa;
+  --color-accent: #0070f3;
+}
+
+/* Dark palette — override the same tokens so every utility flips. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-ink: #ededed;
+    --color-ink-hover: #cccccc;
+    --color-muted: #a1a1a1;
+    --color-subtle: #707070;
+    --color-line: #1f1f1f;
+    --color-line-strong: #333333;
+    --color-surface: #0a0a0a;
+    --color-canvas: #000000;
+    --color-accent: #3b9eff;
+  }
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv11", "ss01";
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ----------------------- Components ------------------------- */
+/* Primary button: inverts automatically via the ink/surface flip. */
+.btn-primary {
+  @apply inline-flex h-11 items-center justify-center gap-2 rounded-lg px-5
+    text-sm font-medium transition;
+  background: var(--color-ink);
+  color: var(--color-surface);
+}
+.btn-primary:hover {
+  background: var(--color-ink-hover);
+}
+
+/* Secondary / outline button. */
+.btn-secondary {
+  @apply inline-flex h-11 items-center justify-center gap-2 rounded-lg border
+    border-line-strong bg-surface px-5 text-sm font-medium text-ink transition
+    hover:border-ink;
+}
+
+/* Small pill for specs / tags. */
+.chip {
+  @apply inline-flex min-h-6 items-center rounded-full border border-line
+    bg-canvas px-2.5 text-xs font-medium text-muted;
+}
+
+/* Monospaced, tabular price — a signature Vercel touch. */
+.price {
+  @apply inline-flex items-center font-mono tabular-nums font-medium text-ink;
+}
+
+/* Bordered surface card with a subtle hover lift. */
+.card {
+  @apply rounded-2xl border border-line bg-surface transition;
+}
+.card-hover {
+  @apply hover:-translate-y-0.5 hover:border-line-strong hover:shadow-lg;
+}
+
+/* Rendered markdown for content pages. Hand-rolled, monochrome. */
+.prose {
+  @apply max-w-none text-[15px] leading-relaxed text-ink;
+}
+.prose h1 {
+  @apply text-3xl font-bold tracking-tight text-ink;
+}
+.prose h2 {
+  @apply mt-10 border-b border-line pb-2 text-xl font-bold tracking-tight text-ink;
+}
+.prose h3 {
+  @apply mt-7 text-lg font-semibold text-ink;
+}
+.prose p {
+  @apply mt-4 text-ink/90;
+}
+.prose ul {
+  @apply mt-4 list-disc pl-6;
+}
+.prose ol {
+  @apply mt-4 list-decimal pl-6;
+}
+.prose li {
+  @apply mt-1.5 text-ink/90;
+}
+.prose a {
+  @apply font-medium text-accent hover:underline;
+}
+.prose strong {
+  @apply font-semibold text-ink;
+}
+.prose img {
+  @apply mx-auto my-6 rounded-xl border border-line;
+}
+.prose code {
+  @apply rounded border border-line bg-canvas px-1.5 py-0.5 font-mono text-[0.85em];
+}
+.prose pre {
+  @apply mt-4 overflow-x-auto rounded-lg border border-line bg-canvas p-4 font-mono text-sm;
+}
+.prose pre code {
+  @apply border-0 bg-transparent p-0;
+}
+.prose hr {
+  @apply my-8 border-line;
+}
+.prose details {
+  @apply mt-3 rounded-xl border border-line bg-canvas px-4 py-3 transition hover:border-line-strong;
+}
+.prose summary {
+  @apply cursor-pointer font-medium text-ink;
+}
+.prose table {
+  @apply mt-4 w-full border-collapse text-sm;
+}
+.prose th,
+.prose td {
+  @apply border border-line px-3 py-2 text-left;
+}

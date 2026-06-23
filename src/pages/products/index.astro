@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import ProductCard from "../../components/ProductCard.astro";
+
+const products = (await getCollection("products")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<Base
+  title="Products — Lily58 Shop"
+  description="Buy a hand-built Lily58 wireless split mechanical keyboard — MX and low-profile Choc versions, Vial support, hot-swap, 2.4G wireless. Free worldwide shipping."
+>
+  <section class="mx-auto max-w-6xl px-5 py-16">
+    <h1 class="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      Products
+    </h1>
+    <p class="mt-3 max-w-xl text-muted">
+      Both keyboards share the same 2.4G wireless internals and Vial firmware —
+      the difference is the switch profile. Free worldwide shipping on every
+      order.
+    </p>
+    <div class="mt-10 grid gap-5 sm:grid-cols-2">
+      {products.map((product) => <ProductCard product={product} />)}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,63 @@
+---
+interface Props {
+  images: { src: string; alt: string }[];
+}
+const { images } = Astro.props;
+const first = images[0];
+---
+
+<div data-gallery class="flex flex-col gap-3">
+  <div class="card aspect-[4/3] overflow-hidden bg-canvas">
+    <img
+      data-gallery-main
+      src={first.src}
+      alt={first.alt}
+      class="h-full w-full object-contain p-2"
+    />
+  </div>
+
+  {
+    images.length > 1 && (
+      <div class="grid grid-cols-5 gap-2 sm:grid-cols-6">
+        {images.map((img, i) => (
+          <button
+            type="button"
+            data-gallery-thumb={img.src}
+            data-alt={img.alt}
+            aria-label={img.alt}
+            class:list={[
+              "aspect-square overflow-hidden rounded-lg border bg-canvas p-1 transition",
+              i === 0 ? "border-ink" : "border-line hover:border-line-strong",
+            ]}
+          >
+            <img
+              src={img.src}
+              alt=""
+              loading="lazy"
+              class="h-full w-full object-contain"
+            />
+          </button>
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<script>
+  for (const g of document.querySelectorAll("[data-gallery]")) {
+    const main = g.querySelector("[data-gallery-main]");
+    const thumbs = g.querySelectorAll("[data-gallery-thumb]");
+    thumbs.forEach((t) =>
+      t.addEventListener("click", () => {
+        main.src = t.getAttribute("data-gallery-thumb");
+        main.alt = t.getAttribute("data-alt") || "";
+        thumbs.forEach((x) => {
+          x.classList.add("border-line");
+          x.classList.remove("border-ink");
+        });
+        t.classList.add("border-ink");
+        t.classList.remove("border-line");
+      }),
+    );
+  }
+</script>

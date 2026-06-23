@@ -1,0 +1,70 @@
+---
+import Base from "../../layouts/Base.astro";
+import DocsSidebar from "../../components/DocsSidebar.astro";
+import { SITE } from "../../lib/site";
+
+const sections = [
+  {
+    title: "Vial Guide",
+    href: "/docs/guide/vial/",
+    body: "Remap keys, layers, macros, Tap Dance and combos live with Vial.",
+  },
+  {
+    title: "Battery Replacement",
+    href: "/docs/guide/battery/",
+    body: "How to swap the CR2450 coin cells and reinstall the cover.",
+  },
+  {
+    title: "FAQ",
+    href: "/docs/faq/",
+    body: "Connectivity, customization, soldered versions, and Vial help.",
+  },
+  {
+    title: "Privacy",
+    href: "/docs/policy/privacy/",
+    body: "What data is and is not collected on this site.",
+  },
+  {
+    title: "Terms of Service",
+    href: "/docs/policy/terms-of-service/",
+    body: "Orders, payments, returns, and limitation of liability.",
+  },
+  {
+    title: "Shipping & Returns",
+    href: "/docs/policy/shipping-return/",
+    body: "Shipping times, customs duties, returns and refunds.",
+  },
+];
+---
+
+<Base
+  title={`Docs — ${SITE.title}`}
+  description="Documentation for the Lily58 wireless split keyboard — 2.4G wireless, RP2040, hot-swap sockets, Vial remapping, layers, macros, setup guides and policies."
+>
+  <div
+    class="mx-auto max-w-6xl gap-10 px-5 py-12 md:grid md:grid-cols-[220px_1fr]"
+  >
+    <aside class="mb-8 md:mb-0">
+      <div class="md:sticky md:top-24"><DocsSidebar /></div>
+    </aside>
+
+    <div>
+      <h1 class="text-3xl font-bold tracking-tight text-ink">Documentation</h1>
+      <p class="mt-2 max-w-xl text-muted">
+        Everything about your Lily58 — 2.4G wireless, RP2040, hot-swap sockets
+        and Vial. Setup guides and policies below.
+      </p>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+        {
+          sections.map((s) => (
+            <a href={s.href} class="card card-hover p-5">
+              <h3 class="font-semibold text-ink">{s.title}</h3>
+              <p class="mt-1 text-sm text-muted">{s.body}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Base>

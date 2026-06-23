@@ -1,0 +1,136 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import ProductCard from "../components/ProductCard.astro";
+import { SITE } from "../lib/site";
+
+const products = (await getCollection("products")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const features = [
+  {
+    title: "2.4G Wireless",
+    body: "Low-latency wireless via the included receiver — no Bluetooth pairing, no cables across your desk.",
+  },
+  {
+    title: "Vial Support",
+    body: "Remap keys, layers, and macros live in the Vial GUI. No recompiling firmware, ever.",
+  },
+  {
+    title: "Hot-swap Sockets",
+    body: "Swap switches by hand, no soldering. Try MX or low-profile Choc and find your feel.",
+  },
+  {
+    title: "RP2040 + 16 Layers",
+    body: "Powerful custom firmware: 16 layers, 36 macros, Tap Dance, combos, and key overrides.",
+  },
+];
+
+const orgLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE.title,
+  url: SITE.url,
+  logo: new URL(SITE.ogImage, SITE.url).href,
+  email: SITE.email,
+  sameAs: [SITE.github, SITE.telegram],
+};
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE.title,
+  url: SITE.url,
+  description: SITE.description,
+};
+---
+
+<Base
+  title={`${SITE.title} — ${SITE.tagline}`}
+  description={SITE.description}
+  jsonLd={[orgLd, websiteLd]}
+>
+  <!-- Hero -->
+  <section class="mx-auto max-w-6xl px-5 pt-16 pb-12 sm:pt-24">
+    <div class="grid items-center gap-12 lg:grid-cols-2">
+      <div>
+        <span class="chip">Free worldwide shipping</span>
+        <h1
+          class="mt-4 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl md:text-6xl"
+        >
+          The Lily58, <br class="hidden sm:block" />reimagined wireless.
+        </h1>
+        <p class="mt-5 max-w-md text-lg text-muted">
+          A hand-built split ergonomic mechanical keyboard — Vial support,
+          hot-swap sockets, RP2040 inside, and 2.4G wireless.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="/products/" class="btn-primary">Shop keyboards</a>
+          <a href="/docs/" class="btn-secondary">Read the docs</a>
+        </div>
+      </div>
+      <div class="card overflow-hidden">
+        <img
+          src="/images/keyboard.jpg"
+          alt="Lily58 wireless split ergonomic mechanical keyboard"
+          width="1384"
+          height="1080"
+          class="h-full w-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="mx-auto max-w-6xl px-5 py-12">
+    <div class="grid gap-4 border-t border-line pt-12 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        features.map((f) => (
+          <div class="card p-6">
+            <h3 class="text-base font-semibold text-ink">{f.title}</h3>
+            <p class="mt-2 text-sm text-muted">{f.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Featured products -->
+  <section class="mx-auto max-w-6xl px-5 py-12">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight text-ink">Keyboards</h2>
+        <p class="mt-1 text-sm text-muted">
+          Two builds, identical internals. Pick your switch profile.
+        </p>
+      </div>
+      <a
+        href="/products/"
+        class="hidden text-sm font-medium text-accent hover:underline sm:block"
+        >All products →</a
+      >
+    </div>
+    <div class="mt-6 grid gap-5 sm:grid-cols-2">
+      {products.map((product) => <ProductCard product={product} />)}
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="mx-auto max-w-6xl px-5 py-12">
+    <div
+      class="card flex flex-col items-center gap-4 px-6 py-12 text-center"
+    >
+      <h2 class="text-2xl font-bold tracking-tight text-ink">
+        Type more comfortably.
+      </h2>
+      <p class="max-w-md text-sm text-muted">
+        Each keyboard is assembled and tested by hand before it ships. Questions
+        first? Reach out any time.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/products/" class="btn-primary">Shop keyboards</a>
+        <a href={`mailto:${SITE.email}`} class="btn-secondary">Contact</a>
+      </div>
+    </div>
+  </section>
+</Base>

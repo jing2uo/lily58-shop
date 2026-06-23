@@ -1,2 +1,11 @@
-public/
-.hugo_build.lock
+# build output
+dist/
+# astro generated types
+.astro/
+# dependencies
+node_modules/
+# environment
+.env
+.env.production
+# misc
+.DS_Store
